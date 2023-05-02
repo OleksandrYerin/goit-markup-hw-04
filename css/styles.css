@@ -7,6 +7,8 @@
     --CLOUD: #F4F4FD;
     --SLATE: #434455;
     --BORDER-CUSTOMER: #8E8F99;
+    --GREY: #f4f4fd;
+    --GREEN: #31d0aa;
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -189,6 +191,7 @@ padding: 188px 0px;
 .social-icons {
     display: flex;
     gap: 24px;
+    justify-content: center;
 }
 .social-item {
     display: flex;
@@ -197,7 +200,7 @@ padding: 188px 0px;
 
 }
 .social {
-    border-radius: 50%;
+   fill: var(--GREY);
 }
 .social-link {
     display: flex;
@@ -284,34 +287,83 @@ border-radius: 50%;
  .employees-text {
     padding: 32px 16px;
     text-align: center;
+    padding: 32px 0;
  }
 
- /* customers-list-icon{ */
-    
- .customer-card {
+    .customers {
+      padding-top: 120px;
+      padding-bottom: 120px;  
+    }
+    .customers-list-icon {
+        fill: currentColor;
+    }
+   
+    .customer .header-projects {
+       line-height: 1.1;  
+    }
+    .customers-link{
+        width: 100%;
+        height: 100%; 
+        background-color: var(--IRIS);
+        border-radius: 50%;
+       display: flex; 
+       align-items: center; 
+       justify-content: center;
+    }
+    .customers-link:hover,
+    .customers-btn:focus {
+    background-color: var(--GREEN);
+    }
+ .customers-card {
     display: flex;
+    gap: 24px;
  }
-
+ .customers-icon {
+    fill: var(--GREY);
+ }
  .customers-item {
     color: var(--BORDER-CUSTOMER);
     justify-content: center;
     gap: 24px;
     border: 1px var(--BORDER-CUSTOMER);
     width: 168px;
-    height: 88;
+    height: 88px;
     justify-content: center;
     align-content: center;
+    width: calc((100% - 120px) / 6);
  }
 
  .customers-link {
-    justify-content: center;
+    display: flex;
     gap: 24px;
-    border: 1px index.html
-    width: 168px;
-    height: 88;
+    border: 1px solid var(--BORDER-CUSTOMER);
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
     justify-content: center;
     align-content: center;
+    color: var(--BORDER-CUSTOMER);
  }
+ .container .bottom{
+   display: flex; 
+   align-items: baseline;
+   margin-right: 120px;
+ }
+
+ .text-social {
+    font-weight: 500;
+    font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: var(--WHITE);
+margin-bottom: 16px;
+ }
+
+ .text-social{
+    display: flex; 
+    gap: 16px;
+ }
+
 .bottom {
     background-color: var(--NAVY_BLUE);
     padding: 100px 0;
@@ -324,11 +376,6 @@ border-radius: 50%;
 footer .social-icons {
     display: flex;
     gap: 16px;
-}
-footer .social-item {
-    display: flex;
-    width: 40px;
-    height: 40px;
 }
 
 .social-link {
@@ -375,8 +422,13 @@ border-radius: 50%;
     border-radius: 4px;
     padding: 12px 24px;
 }
-.active:active {
+.active:active
+ {
     color: var(--OCEAN);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.active:hover,
+.active:focus {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .portfolio-card {
@@ -396,7 +448,16 @@ border-radius: 50%;
 }
 .portfolio-item {
     flex-basis: calc((100% - 48px) / 3);
+    
 }
+.portfolio-link{
+display: block;   
+}
+.portfolio-link:hover,
+.portfolio-link:hover {
+   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);  
+}
+
 .portfolio-header {
     font-weight: 500;
     font-size: 20px;
