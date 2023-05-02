@@ -194,13 +194,15 @@ padding: 188px 0px;
     justify-content: center;
 }
 .social-item {
-    display: flex;
     width: 40px;
     height: 40px;
-
+}
+.social-container {
+    display: flex; 
+    gap: 16px; 
 }
 .social {
-   fill: var(--GREY);
+   fill: var(--CLOUD);
 }
 .social-link {
     display: flex;
@@ -211,9 +213,10 @@ width: 100%;
 background-color: var(--IRIS);
 border-radius: 50%;
 }
+
 .social-link:hover,
 .social-link:focus {
-    background-color: var(--OCEAN);
+    background-color: var(--GREEN);
 }
 
 .projects {
@@ -229,7 +232,7 @@ border-radius: 50%;
 }
 .header-projects {
    font-size: 36px;
-   line-height: 1.11;
+   line-height: 1.1;
    text-align: center;
    letter-spacing: 0.02em;
    text-transform: capitalize;
@@ -312,8 +315,10 @@ border-radius: 50%;
     }
     .customers-link:hover,
     .customers-btn:focus {
-    background-color: var(--GREEN);
+    background-color: var(--OCEAN);
+    border-color: var(--OCEAN);
     }
+
  .customers-card {
     display: flex;
     gap: 24px;
@@ -359,14 +364,14 @@ color: var(--WHITE);
 margin-bottom: 16px;
  }
 
- .text-social{
-    display: flex; 
-    gap: 16px;
- }
-
 .bottom {
     background-color: var(--NAVY_BLUE);
     padding: 100px 0;
+    display: flex;
+    align-items: baseline;
+}
+.bottom-container {
+    gap: 120px;
 }
 .bottom .logo {
     display: inline-block;
@@ -452,9 +457,10 @@ border-radius: 50%;
 }
 .portfolio-link{
 display: block;   
+
 }
 .portfolio-link:hover,
-.portfolio-link:hover {
+.portfolio-link:focus {
    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);  
 }
 
