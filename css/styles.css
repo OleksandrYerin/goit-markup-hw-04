@@ -104,13 +104,7 @@ nav {
 .logo-text-top {
     color: var(--NAVY_BLUE);
 }
-.logo-text-bottom{
-    color: var(--CLOUD);
-}
-.text-bottom{
-    color: var(--CLOUD);
-    width: 264px;
-}
+
 .hero {
   
 max-width: 1440px;
@@ -363,20 +357,33 @@ border-radius: 50%;
     color: var(--WHITE);
     margin-bottom: 16px;
  }
+ .logo-text-bottom{
+    color: var(--CLOUD);
+}
+.text-bottom{
+    color: var(--CLOUD);
+    width: 264px;
+}
 
 .bottom {
     background-color: var(--NAVY_BLUE);
     padding: 100px 0;
-    display: flex;
-    align-items: baseline;
+
 }
-.bottom-container {
+.bottom-logo-container{
     gap: 120px;
+}
+
+.bottom-container {    
+display: flex;
+align-items: baseline;
+
 }
 .bottom .logo {
     display: inline-block;
     margin-bottom: 16px;
-}
+    }
+
 
 footer .social-icons {
     display: flex;
