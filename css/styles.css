@@ -198,7 +198,8 @@ padding: 188px 0px;
 .social {
    fill: var(--CLOUD);
 }
-.social-link {
+.social-link,
+.footer-link {
     display: flex;
 justify-content: center;
 align-items: center;
@@ -210,9 +211,13 @@ border-radius: 50%;
 
 .social-link:hover,
 .social-link:focus {
-    background-color: var(--GREEN);
+    background-color: var(--OCEAN);
 }
 
+.footer-link:hover,
+.footer-link:focus {
+    background-color: var(--GREEN);
+}
 .projects {
     padding-bottom: 120px; 
 }
