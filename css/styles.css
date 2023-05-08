@@ -50,11 +50,12 @@ nav {
     list-style-type: none;
 }
 .menu-nav {
+    position: relative;
     display: flex;
     gap: 40px;
 }
 .menu {
-    display: flex;
+    
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -62,9 +63,34 @@ nav {
     color: var(--NAVY_BLUE);
     padding: 24px 0;
 }
+.menu::after {
+  content: "";
+  position: absolute;
+
+  width: 100%;
+  height: 4px;
+  display: block;
+  background-color: var(--OCEAN);
+  border-radius: 2px;
+  transition: var(--curent-color);
+  margin-top: 24px;
+   }
+   .menu.active::after {
+    background: #404BBF;
+   }
+
+  /**
+    |============================
+    | transition-duration: 1000ms;
+transition: background-color 500ms linear, transform 500ms ease-in-out 500ms;
 .contacts {
     font-style: normal;
 }
+250ms
+time-function: cubic-bezier(0.4, 0, 0.2, 1)
+    |============================
+  */
+
 .link {
     text-decoration: none;
 }
@@ -99,6 +125,7 @@ header .logo {
 .link:hover,
 .link:focus {
     color: var(--OCEAN);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 .logo-text-top {
     color: var(--NAVY_BLUE);
@@ -202,10 +229,12 @@ header .logo {
 .social-link:hover,
 .social-link:focus {
     background-color: var(--OCEAN);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-link:hover,
 .footer-link:focus {
     background-color: var(--GREEN);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects {
     padding-bottom: 120px; 
@@ -257,6 +286,7 @@ header .logo {
 .button:hover,
 .button:focus {
     background-color: var(--OCEAN);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 .employees {
     background-color: var(--CLOUD);
@@ -292,6 +322,7 @@ header .logo {
     .customers-link:hover,
     .customers-link:focus {
        border-color: var(--OCEAN);
+       transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
  .customers-card {
@@ -372,6 +403,7 @@ footer .social-icons {
     color: var(--WHITE);
     background-color: var(--OCEAN);
     border: 1px solid transparent;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list-btn{
     display: flex;
@@ -392,14 +424,29 @@ footer .social-icons {
     border-radius: 4px;
     padding: 12px 24px;
 }
-.active:active
- {
+.overlay {
+    color: #F4F4FD;
+    font-family: 'Roboto';
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+padding: 40px 32px 164px;
+position: absolute;
+top:0;
+left: 0;
+width: 100%;
+height: 100%;
+transform: translate(0, 100%);
+transition: transform 250ms cubic-bezier(0.4, 0, 0.0.2, 1);
+}
+.active:active {
     color: var(--OCEAN);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .active:hover,
 .active:focus {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-card {
     display: flex;
@@ -414,16 +461,19 @@ footer .social-icons {
 }    
 .card-text:hover { 
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-item {
     flex-basis: calc((100% - 48px) / 3);
 }
 .portfolio-link{
-display: block;   
+display: block; 
+position: relative;  
 }
 .portfolio-link:hover,
 .portfolio-link:focus {
    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);  
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-header {
     font-weight: 500;
