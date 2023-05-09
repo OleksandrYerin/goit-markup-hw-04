@@ -9,6 +9,8 @@
     --BORDER-CUSTOMER: #8E8F99;
     --GREY: #f4f4fd;
     --GREEN: #31d0aa;
+    --MODAL_BACKROUND: #FCFCFC;
+    --MODAL_OVERLAY: #2E2F42;
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -55,44 +57,39 @@ nav {
     gap: 40px;
 }
 .menu {
-    
+    position: relative;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: var(--NAVY_BLUE);
+    color: #404bbf;
+    bottom: -1px;
     padding: 24px 0;
+    transition: color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .menu::after {
   content: "";
   position: absolute;
-
+left: 0;
+bottom: -1px;
   width: 100%;
   height: 4px;
   display: block;
   background-color: var(--OCEAN);
   border-radius: 2px;
-  transition: var(--curent-color);
-  margin-top: 24px;
+  /* transition: var(--curent-color); */
+  /* margin-top: 24px; */
+  
+  
    }
    .menu.active::after {
     background: #404BBF;
    }
 
-  /**
-    |============================
-    | transition-duration: 1000ms;
-transition: background-color 500ms linear, transform 500ms ease-in-out 500ms;
-.contacts {
-    font-style: normal;
-}
-250ms
-time-function: cubic-bezier(0.4, 0, 0.2, 1)
-    |============================
-  */
-
-.link {
+ .link {
     text-decoration: none;
+    transition: transform 250ms, cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-list {
     display: flex;
@@ -107,6 +104,7 @@ time-function: cubic-bezier(0.4, 0, 0.2, 1)
     color: var(--SLATE);
     text-decoration: none;
     padding: 24px 0;
+    transition: color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo {
     display: block;
@@ -121,11 +119,24 @@ time-function: cubic-bezier(0.4, 0, 0.2, 1)
 header .logo {
     margin-right: 76px;
 }
- 
+.logo-item {
+    display: flex;
+}
+ /* line::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  display: block;
+  background-color: var(--button-h-f);
+  border-radius: 2px;
+  transition: var(--curent-color);
+  margin-top: 24px; */
 .link:hover,
 .link:focus {
     color: var(--OCEAN);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     }
 .logo-text-top {
     color: var(--NAVY_BLUE);
@@ -225,16 +236,18 @@ header .logo {
     width: 100%;
     background-color: var(--IRIS);
     border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* transition: transform 250ms, cubic-bezier(0.4, 0, 0.2, 1); */
 }
 .social-link:hover,
 .social-link:focus {
     background-color: var(--OCEAN);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ 
 }
 .footer-link:hover,
 .footer-link:focus {
     background-color: var(--GREEN);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .projects {
     padding-bottom: 120px; 
@@ -282,12 +295,13 @@ header .logo {
     min-width: 169px; 
     height: 56px;
     border: none; 
+    transition: color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .button:hover,
 .button:focus {
     background-color: var(--OCEAN);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
+        }
 .employees {
     background-color: var(--CLOUD);
     padding: 120px 0;
@@ -322,8 +336,7 @@ header .logo {
     .customers-link:hover,
     .customers-link:focus {
        border-color: var(--OCEAN);
-       transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
+       }
 
  .customers-card {
     display: flex;
@@ -345,7 +358,9 @@ header .logo {
     width: 100%;
     height: 100%;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    transition: color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms, cubic-bezier(0.4, 0, 0.2, 1);
  }
  .customers-list-icon {
     fill: currentColor;
@@ -385,6 +400,7 @@ header .logo {
 .bottom .logo {
     display: inline-block;
     margin-bottom: 16px;
+    transition: color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
     }
 footer .social-icons {
     display: flex;
@@ -403,14 +419,18 @@ footer .social-icons {
     color: var(--WHITE);
     background-color: var(--OCEAN);
     border: 1px solid transparent;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+  
+} 
+    .btn-item{
+
+    }
 .list-btn{
     display: flex;
     justify-content: center;
     margin-bottom: 72px;
     gap: 24px;
 }
+.btn-item
 .filter-btn {
     font-weight: 500;
     font-size: 16px;
@@ -423,21 +443,28 @@ footer .social-icons {
     border: 1px solid var(--CORNFLOWER);
     border-radius: 4px;
     padding: 12px 24px;
+    transition: color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms, cubic-bezier(0.4, 0, 0.2, 1);
 }
 .overlay {
-    color: #F4F4FD;
-    font-family: 'Roboto';
-font-size: 16px;
+    padding: 40px 32px;
+   color: #F4F4FD;
+   background-color: var(--IRIS);
+   height: 100%;
+   transition: transform 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
-padding: 40px 32px 164px;
 position: absolute;
 top:0;
 left: 0;
 width: 100%;
-height: 100%;
-transform: translate(0, 100%);
-transition: transform 250ms cubic-bezier(0.4, 0, 0.0.2, 1);
+}
+.active {
+    transition: transform 250ms, cubic-bezier(0.4, 0, 0.2, 1);
 }
 .active:active {
     color: var(--OCEAN);
@@ -446,34 +473,42 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.0.2, 1);
 .active:hover,
 .active:focus {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    }
 .portfolio-card {
     display: flex;
     flex-wrap: wrap;
     row-gap: 48px;   
     column-gap: 24px
 }
+.card-overlay{
+    position: relative;
+    overflow: hidden;
+}
 .card-text {
     padding: 32px 16px;
     border: 1px solid var(--CORNFLOWER);
     border-top: none;
+    transition: transform 250ms, cubic-bezier(0.4, 0, 0.2, 1);
 }    
 .card-text:hover { 
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .portfolio-item {
     flex-basis: calc((100% - 48px) / 3);
+    
 }
 .portfolio-link{
 display: block; 
 position: relative;  
+transition: transform 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+transition: box-shadow 250ms, cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-link:hover,
 .portfolio-link:focus {
    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);  
-   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transform: translateY(0%);
+  
 }
 .portfolio-header {
     font-weight: 500;
@@ -490,3 +525,61 @@ position: relative;
     letter-spacing: 0.02em;
     color: var(--SLATE);
 }
+.backdrop {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(46, 47, 66, 0.4);
+transition: opacity 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+transition: visibility 250ms, cubic-bezier(0.4, 0, 0.2, 1); 
+}
+.is-hidden {
+ pointer-events: none;  
+ visibility: hidden; 
+ opacity: 0;
+}
+.modal {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) scale(1);
+width: 408px;
+min-height: 576px; 
+background: #fcfcfc;
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 4px; 
+transition: transform 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal:hover {
+color: var(--WHITE)
+}
+
+.modal-close-btn {
+    position: absolute; 
+    top: 24px; 
+    right: 24px;
+    width: 24px; 
+    height: 24px; 
+    border-radius: 50%; 
+display: flex; 
+align-items: center; 
+justify-content: center; 
+background-color: #e7e9fc; 
+border: 1px solid rgba(0, 0, 0, 0.1); 
+padding: 0; 
+cursor: pointer; 
+transition: background-color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+background-color: #404bbf;
+border: none;
+}
+.modal-close-icon {
+  transition: fill 250ms, cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+/* color var(--active-page-color-) */
