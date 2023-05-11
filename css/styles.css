@@ -86,15 +86,15 @@ nav {
     }
   |============================
 */
-.menu:active::after {
-  content: "";
+.menu::after {
+  content: '';
   position: absolute;
 left: 0;
 bottom: -1px;
   width: 100%;
   height: 4px;
   display: block;
-  background-color: var(--OCEAN);
+  background-color: transparent;
   border-radius: 2px;
   /* transition: var(--curent-color); */
   /* margin-top: 24px; */
@@ -102,6 +102,10 @@ bottom: -1px;
    /* .menu.active::after { */
     /* background: #404BBF; */
    /* } */
+
+   .menu:active::after {
+    background-color: var(--OCEAN);
+   }
 
  .link {
     text-decoration: none;
@@ -120,7 +124,7 @@ bottom: -1px;
     color: var(--SLATE);
     text-decoration: none;
     padding: 24px 0;
-    transition: color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo {
     display: block;
@@ -374,8 +378,9 @@ header .logo {
     height: 100%;
     justify-content: center;
     align-items: center;
-    transition: border-color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
-    transition: transform 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
  .customers-list-icon {
     fill: currentColor;
@@ -550,8 +555,8 @@ left: 0;
 width: 100%;
 height: 100%;
 background-color: rgba(46, 47, 66, 0.4);
-transition: opacity 250ms, cubic-bezier(0.4, 0, 0.2, 1);
-transition: visibility 250ms, cubic-bezier(0.4, 0, 0.2, 1); 
+transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .is-hidden {
  pointer-events: none;  
@@ -568,7 +573,8 @@ min-height: 576px;
 background: #fcfcfc;
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 4px; 
-transition: transform 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal:hover {
 color: var(--WHITE)
@@ -593,8 +599,9 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-background-color: #404bbf;
+color: #404bbf;
 border: none;
+fill: #ffffff;
 }
 .modal-close-icon {
   transition: fill 250ms, cubic-bezier(0.4, 0, 0.2, 1); 

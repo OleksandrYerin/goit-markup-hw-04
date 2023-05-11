@@ -42,11 +42,15 @@
         <div class="container">
           <h1 class="solution">Effective Solutions for Your Business</h1>
           <button data-modal-open type="button" class="button">Order Service</button>
-          <div class="back-drop is-hidden" data-modal>
+          <div data-modal class="backdrop is-hidden" >
             <div class="modal">
-              <p>
-
-              </p>
+              <button data-modal-close class="modal-close-btn" type="button">
+                <svg class="close" width="24" height="24"><use href="./images/close-black.svg"></use>
+                </svg>
+                <!-- <svg class="close" width="24" height="24"> 
+                  <use href="./images/close-black.svg"></use>
+                </svg> -->
+              </button>
             </div>
           </div>  
        
@@ -312,7 +316,8 @@
             </li>
         <li class="social-item">
             <a href="" class="footer-link">
-              <svg class="social" width="24" height="24"><use href="./images/icons.svg#icon-linkedin"></use>
+              <svg class="social" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
               </svg>
             </a>
             </li>
@@ -320,11 +325,11 @@
           </div> 
         </div>
        </footer>
-       <div class="backdrop is-hidden">
+       <div data-modal class="backdrop is-hidden">
     <div class="modal">
       <button data-modal-close class="modal-close-btn" type="button">
-        <svg class="close" width="24" height="24"> 
-          <use href="./images/icons.close-black.svg"></use>
+        <svg class="close" width="8" height="8"> 
+          <use href="./images/icons.svg#modal-close-icon"></use>
         </svg>
       </button>
       
